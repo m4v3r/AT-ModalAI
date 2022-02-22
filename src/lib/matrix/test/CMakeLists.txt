@@ -8,7 +8,6 @@ add_compile_options(
 set(tests
     slice
     vectorAssignment
-    vector
     vector2
     vector3
     squareMatrix
@@ -44,3 +43,4 @@ px4_add_unit_gtest(SRC MatrixScalarMultiplicationTest.cpp)
 px4_add_unit_gtest(SRC MatrixSetIdentityTest.cpp)
 px4_add_unit_gtest(SRC MatrixSparseVectorTest.cpp)
 px4_add_unit_gtest(SRC MatrixTransposeTest.cpp)
+px4_add_unit_gtest(SRC MatrixVectorTest.cpp)
