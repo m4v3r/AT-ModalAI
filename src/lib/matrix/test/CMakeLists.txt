@@ -11,10 +11,7 @@ set(tests
     vector
     vector2
     vector3
-    integration
     squareMatrix
-    helper
-    hatvee
     least_squares
     upperRightTriangle
     dual
@@ -37,6 +34,9 @@ px4_add_unit_gtest(SRC MatrixAssignmentTest.cpp)
 px4_add_unit_gtest(SRC MatrixAttitudeTest.cpp)
 px4_add_unit_gtest(SRC MatrixCopyToTest.cpp)
 px4_add_unit_gtest(SRC MatrixFilterTest.cpp)
+px4_add_unit_gtest(SRC MatrixHatveeTest.cpp)
+px4_add_unit_gtest(SRC MatrixHelperTest.cpp)
+px4_add_unit_gtest(SRC MatrixIntegralTest.cpp)
 px4_add_unit_gtest(SRC MatrixInverseTest.cpp)
 px4_add_unit_gtest(SRC MatrixMultiplicationTest.cpp)
 px4_add_unit_gtest(SRC MatrixPseudoInverseTest.cpp)
