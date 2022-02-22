@@ -6,28 +6,20 @@ add_compile_options(
 )
 
 set(tests
-    setIdentity
     inverse
     slice
-    matrixMult
     vectorAssignment
-    matrixAssignment
-    matrixScalarMult
-    transpose
     vector
     vector2
     vector3
-    attitude
     filter
     integration
     squareMatrix
     helper
     hatvee
-    copyto
     least_squares
     upperRightTriangle
     dual
-    pseudoInverse
 )
 
 add_custom_target(test_build)
@@ -43,4 +35,12 @@ foreach(test_name ${tests})
     add_dependencies(test_results test-matrix_${test_name})
 endforeach()
 
-px4_add_unit_gtest(SRC sparseVector.cpp)
+px4_add_unit_gtest(SRC MatrixAssignmentTest.cpp)
+px4_add_unit_gtest(SRC MatrixAttitudeTest.cpp)
+px4_add_unit_gtest(SRC MatrixCopyToTest.cpp)
+px4_add_unit_gtest(SRC MatrixMultiplicationTest.cpp)
+px4_add_unit_gtest(SRC MatrixPseudoInverseTest.cpp)
+px4_add_unit_gtest(SRC MatrixScalarMultiplicationTest.cpp)
+px4_add_unit_gtest(SRC MatrixSetIdentityTest.cpp)
+px4_add_unit_gtest(SRC MatrixSparseVectorTest.cpp)
+px4_add_unit_gtest(SRC MatrixTransposeTest.cpp)
